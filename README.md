@@ -72,3 +72,13 @@ Road,0.5,0.1,0.02
 Rail,0.3,0.08,0.01
 Air,1.5,0.02,0.05
 Sea,0.2,0.05,0.01
+```
+
+## Previews
+
+![image](https://github.com/nkusharoraa/transportation_tool/assets/59050030/8081a772-d6a6-46b4-ab36-ce9f56f3cbdb)
+
+
+![image](https://github.com/nkusharoraa/transportation_tool/assets/59050030/803bacca-b006-4fde-868e-9f0e1fb5e902)
+
+![image](https://github.com/nkusharoraa/transportation_tool/assets/59050030/7b630b66-dbfd-448a-8576-2cb81680b722)
