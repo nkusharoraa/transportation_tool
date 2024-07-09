@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transportation Mode Selection Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Transportation Mode Selection Tool</h1>
+    <form method="POST" action="/recommend">
+        <label for="distance">Distance (miles):</label>
+        <input type="number" id="distance" name="distance" step="0.01" required>
+        
+        <label for="weight">Weight (tons):</label>
+        <input type="number" id="weight" name="weight" step="0.01" required>
+        
+        <button type="submit">Get Recommendation</button>
+    </form>
+
+    {% if recommendations %}
+    <h2>Recommendations:</h2>
+    <table>
+        <tr>
+            <th>Mode</th>
+            <th>Total Cost</th>
+            <th>Total Time</th>
+            <th>Total Emissions</th>
+        </tr>
+        {% for rec in recommendations %}
+        <tr>
+            <td>{{ rec.mode }}</td>
+            <td>{{ rec.total_cost }}</td>
+            <td>{{ rec.total_time }}</td>
+            <td>{{ rec.total_emissions }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+</body>
+</html>
